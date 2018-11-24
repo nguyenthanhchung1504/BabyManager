@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@mipmap/ic_feed"
+            android:title="@string/feed" />
+        <item
+            android:id="@+id/nav_sleep"
+            android:icon="@mipmap/ic_sleep"
+            android:title="@string/sleep" />
+        <item
+            android:id="@+id/nav_diaper"
+            android:icon="@mipmap/ic_diaper"
+            android:title="@string/change_diaper" />
+        <item
+            android:id="@+id/nav_measure"
+            android:icon="@mipmap/ic_measure"
+            android:title="@string/height_and_weight" />
+    </group>
+
+    <item android:title="@string/other_functions" >
+        <menu>
+            <item
+
+                android:id="@+id/nav_chart"
+                android:icon="@mipmap/ic_chart"
+                android:title="@string/chart" />
+            <item
+                android:id="@+id/nav_baby"
+                android:icon="@mipmap/ic_info_baby"
+                android:title="@string/info_baby" />
+            <item
+                android:id="@+id/nav_tips"
+                android:icon="@mipmap/ic_tips"
+                android:title="@string/tips" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@mipmap/ic_infor_dev_zer"
+                android:title="@string/info_developer" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.babymanager.babymanager.Activity.FeedActivity">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/choose_food_type"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btn_feed"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="@string/save"
+        android:textColor="@color/color_font_button"
+        app:cornerRadius="@dimen/_30sdp"
+        app:fButtonColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_content"
+        app:shadowColor="@android:color/darker_gray"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_2sdp" />
+
+    <ImageView
+        android:id="@+id/img_fruit"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/img_meat"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintEnd_toStartOf="@+id/img_vegetable"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_fruit"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/img_vegetable"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_meat"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/img_cake"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <ImageView
+        android:id="@+id/img_cereal"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/img_juice"
+        app:layout_constraintStart_toEndOf="@+id/img_cake"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <ImageView
+        android:id="@+id/img_juice"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/img_cereal"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <EditText
+        android:id="@+id/edt_content"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/border_edittext"
+        android:ems="10"
+        android:hint="@string/note"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <ImageView
+        android:id="@+id/img_check_fruit"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_fruit"
+        app:layout_constraintEnd_toEndOf="@+id/img_fruit"
+        app:layout_constraintStart_toStartOf="@+id/img_fruit"
+        app:layout_constraintTop_toTopOf="@+id/img_fruit" />
+
+    <ImageView
+        android:id="@+id/img_check_meat"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_meat"
+        app:layout_constraintEnd_toEndOf="@+id/img_meat"
+        app:layout_constraintStart_toStartOf="@+id/img_meat"
+        app:layout_constraintTop_toTopOf="@+id/img_meat" />
+
+    <ImageView
+        android:id="@+id/img_check_vegetables"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_vegetable"
+        app:layout_constraintEnd_toEndOf="@+id/img_vegetable"
+        app:layout_constraintStart_toStartOf="@+id/img_vegetable"
+        app:layout_constraintTop_toTopOf="@+id/img_vegetable" />
+
+    <ImageView
+        android:id="@+id/img_check_cake"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cake"
+        app:layout_constraintEnd_toEndOf="@+id/img_cake"
+        app:layout_constraintStart_toStartOf="@+id/img_cake"
+        app:layout_constraintTop_toTopOf="@+id/img_cake" />
+
+    <ImageView
+        android:id="@+id/img_check_cereals"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cereal"
+        app:layout_constraintEnd_toEndOf="@+id/img_cereal"
+        app:layout_constraintStart_toStartOf="@+id/img_cereal"
+        app:layout_constraintTop_toTopOf="@+id/img_cereal" />
+
+    <ImageView
+        android:id="@+id/img_check_juice"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_juice"
+        app:layout_constraintEnd_toEndOf="@+id/img_juice"
+        app:layout_constraintTop_toTopOf="@+id/img_juice" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="@string/fruit"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_fruit"
+        app:layout_constraintStart_toStartOf="@+id/img_fruit"
+        app:layout_constraintTop_toBottomOf="@+id/img_fruit" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="@string/ege_meat_fish"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_meat"
+        app:layout_constraintStart_toStartOf="@+id/img_meat"
+        app:layout_constraintTop_toBottomOf="@+id/img_meat" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:gravity="center_horizontal"
+        android:text="@string/vegetables_baby"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_vegetable"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="@+id/img_vegetable"
+        app:layout_constraintTop_toBottomOf="@+id/img_vegetable" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="@string/cake_baby"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_cake"
+        app:layout_constraintStart_toStartOf="@+id/img_cake"
+        app:layout_constraintTop_toBottomOf="@+id/img_cake" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="@string/cereals"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_cereal"
+        app:layout_constraintStart_toStartOf="@+id/img_cereal"
+        app:layout_constraintTop_toBottomOf="@+id/img_cereal" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="@string/water"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_juice"
+        app:layout_constraintStart_toStartOf="@+id/img_juice"
+        app:layout_constraintTop_toBottomOf="@+id/img_juice" />
+</android.support.constraint.ConstraintLayout>

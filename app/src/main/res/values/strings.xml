@@ -1,0 +1,201 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Baby Manager</string>
+    <string name="title_activity_home">Lịch sử hẹn giờ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="tell_us_about_your_baby">Thông tin của bé</string>
+    <string name="full_name">Tên đầy đủ</string>
+    <string name="choose_birthday">Sinh nhật bé</string>
+    <string name="it_is_a_boy_or_a_girl">Bé là trai hay gái?</string>
+    <string name="next">Tiếp theo</string>
+    <string name="shortcut_label">shortcut label</string>
+    <string name="small_empty_time">Thời gian trống</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="stop">Dừng lại</string>
+    <string name="start">Bắt đầu</string>
+    <string name="feed">Thời gian cho bé ăn</string>
+    <string name="history_feed">Lịch sử cho ăn</string>
+    <string name="timer">Hẹn giờ</string>
+    <string name="other_functions" tools:ignore="ExtraTranslation">Chức năng khác</string>
+    <string name="height_and_weight">Theo dõi chiều cao,cân nặng</string>
+    <string name="change_diaper">Thời gian thay tã cho bé</string>
+    <string name="sleep">Theo dõi giấc ngủ của bé</string>
+    <string name="chart">Biểu đồ</string>
+    <string name="info_baby">Thông tin của trẻ</string>
+    <string name="info_developer">Thông tin nhà phát triển</string>
+    <string name="tips">Mẹo vặt cho bé</string>
+    <string name="history_weight_height">Lịch sử cân nặng và chiều cao</string>
+    <string name="sleep_history">Thống kê giấc ngủ</string>
+    <string name="change_diaper_history">Lịch sử thay tã</string>
+    <string name="chart_height_weight">Biểu đồ chiều cao,cân nặng</string>
+    <string name="fill_title">Nhập tiêu đề</string>
+    <string name="fill_body">Nhập nội dung</string>
+    <string name="turn_off_the_ringtone">Tắt nhạc chuông</string>
+    <string name="dried">Khô</string>
+    <string name="wet">Uớt</string>
+    <string name="no_data">Không có dữ liệu thời gian, nhấn vào dấu + để thêm thời gian</string>
+    <string name="zergitas">ZERGITAS</string>
+    <string name="cau_giay_ha_noi">Cau Giay,Ha Noi</string>
+    <string name="product">Product: Baby manager</string>
+    <string name="version">Version : 1.0.0</string>
+    <string name="develop">Developer : Nguyễn Thành Chung</string>
+    <string name="designer">Designer : Vũ Hồng Ngọc</string>
+    <string name="add_height_weight">Thêm chiều cao,cân nặng mới</string>
+    <string name="height">Chiều cao</string>
+    <string name="cm">Cm</string>
+    <string name="weight">Cân nặng</string>
+    <string name="kg">Kg</string>
+    <string name="sex">Giới tính</string>
+    <string name="let_go_to_bed">Cho bé đi ngủ nào</string>
+    <string name="start_sleep">Bắt đầu ngủ</string>
+    <string name="wake_up">Thức dậy</string>
+    <string name="no_data_timer">Không có dữ liệu mời bạn thêm thời gian</string>
+    <string name="choose_food_type">Chọn loại thức ăn</string>
+    <string name="content">Hàm lượng</string>
+    <string name="ml">ml</string>
+    <string name="delete">Xóa</string>
+    <string name="timer_sleep">Thời gian ngủ</string>
+    <string name="measure">Kích thước</string>
+    <string name="deleted">Đã xóa!</string>
+    <string name="continues_sleep">Tiếp tục ngủ</string>
+    <string name="choose_language">Chọn ngôn ngữ...</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="japanese">Tiếng Nhật</string>
+    <string name="tips_for_baby">Mẹo chăm sóc bé</string>
+    <string name="detail">Chi tiết</string>
+    <string name="Boy">Nam</string>
+    <string name="Girl">Nữ</string>
+    <string name="please_fill_your_baby">Xin hãy nhập tên cho em bé</string>
+    <string name="hours"> giờ </string>
+    <string name="minutes"> phút </string>
+    <string name="date">Ngày </string>
+    <string name="powdered_milk">Sữa bột</string>
+    <string name="mother_milk">Sữa mẹ</string>
+    <string name="milk">Sữa</string>
+    <string name="meal">Thức ăn</string>
+    <string name="fruit">Hoa quả</string>
+    <string name="meat">Trứng,thịt,cá</string>
+    <string name="vegetables">Rau củ</string>
+    <string name="cake">Bánh ngọt</string>
+    <string name="juice">Nước</string>
+    <string name="cereals">Ngũ cốc</string>
+    <string name="to">đến</string>
+    <string name="month">Tháng</string>
+    <string name="jan">Tháng 1</string>
+    <string name="fer">Tháng 2</string>
+    <string name="mar">Tháng 3</string>
+    <string name="apr">Tháng 4</string>
+    <string name="may">Tháng 5</string>
+    <string name="jun">Tháng 6</string>
+    <string name="jul">Tháng 7</string>
+    <string name="aug">Tháng 8</string>
+    <string name="sep">Tháng 9</string>
+    <string name="oct">Tháng 10</string>
+    <string name="nov">Tháng 11</string>
+    <string name="dec">Tháng 12</string>
+    <string name="measure_history">Lịch sử cân nặng,chiều cao</string>
+    <string name="please_fill">Mời bạn nhập đầy đủ</string>
+    <string name="timer_history">Lịch sử hẹn giờ</string>
+    <string name="change_diaper_baby">Thay tã cho bé</string>
+    <string name="change_diaper_button">Thay tã</string>
+    <string name="diaper_pee">Tã khô</string>
+    <string name="diaper_poo">Tã ướt</string>
+    <string name="timer_for_eat_baby">Thời gian cho bé ăn</string>
+    <string name="height_weight">Chiều cao,cân nặng</string>
+    <string name="add_new">Thêm mới</string>
+    <string name="track_sleep">Theo dõi giấc ngủ</string>
+    <string name="diary_baby">Nhật ký cho bé</string>
+    <string name="save">Lưu</string>
+    <string name="note">Ghi chú...</string>
+    <string name="ege_meat_fish">Trứng,thịt,cá</string>
+    <string name="vegetables_baby">Rau củ</string>
+    <string name="cake_baby">Bánh</string>
+    <string name="water">Nước</string>
+    <string name="choose_milk">Chọn loại sữa</string>
+    <string name="milk_formula">Sữa công thức</string>
+    <string name="baby_slept">Bé đã ngủ được</string>
+    <string name="fill_height">Mời bạn thêm chiều cao cho bé</string>
+    <string name="fill_weight">Mời bạn thêm cân nặng cho bé</string>
+    <string name="you_have_timer">Bạn có báo thức</string>
+    <string name="sleep_icon">Ngủ</string>
+    <string name="eat_icon">Ăn</string>
+    <string name="diaper_icon">Thay tã</string>
+    <string name="tips_icon">Mẹo vặt</string>
+    <string name="diaper">Tã</string>
+    <string name="chart_statistics">Biểu đồ thống kê</string>
+    <string name="chart_chart">Biểu đồ</string>
+    <string name="timer_limit">Bạn chọn lớn hơn thời gian hiện tại</string>
+    <string name="edit_info"><u>Sửa thông tin</u></string>
+    <string name="accept"><u>Đồng ý</u></string>
+    <string name="error">Không thành công ! Bạn chưa nhập tên cho bé</string>
+    <string name="number_one">Mẹo nhỏ để giúp bé uống thuốc dễ dàng</string>
+    <string name="number_two">Cách tắm cho trẻ</string>
+    <string name="number_three">Dầu thực vật giúp loại bỏ cứt trâu trên đầu bé</string>
+    <string name="number_four">Cắt móng tay cho bé</string>
+    <string name="number_five">Tắm bằng khăn</string>
+    <string name="number_six">Thay tã cho bé</string>
+    <string name="number_seven">Áo ngủ của trẻ sơ sinh</string>
+    <string name="number_eight">Cách bế em bé</string>
+    <string name="number_nine">Cách hút hoàn toàn nước dãi, nước mũi hay đồ ăn vương trên mặt bé</string>
+    <string name="number_ten">Cho bé đi chơi</string>
+
+    <string name="number_ele">
+         Mẹo nhỏ để giúp bé uống thuốc dễ dàng là mẹ chỉ cần khoét một lỗ nhỏ ở đầu núm ti và cho ống thuốc vào. Hoặc mẹ cũng có thể sử dụng núm bình sữa mà không cần khoét thêm lỗ. Khi bé đang mút núm ti, mẹ chỉ cần cho thuốc để bé uống luôn. Quá đơn giản, phải không?
+
+  Mẹ có thể giúp bé hết trớ bằng cách đặt bé ngồi trên đùi mẹ và dùng chân mẹ di chuyển phần cơ thể bé thành một vòng tròng trong khi tay vẫn giữ đầu bé đứng yên.
+    </string>
+    <string name="number_twe">
+         Áo ngủ của trẻ sơ sinh sẽ giúp bé cử động thoải mái hơn là quần áo thông thường hay pyjama. Hơn nữa phần bo lại phía dưới sẽ giúp giữ ấm cho bàn chân và phần thân dưới của bé.
+
+ Khi mua quần áo cho bé ưu tiên chọn đồ có khóa bấm, hạn chế nút cài. Việc này giúp thay quần áo cho bé nhanh chóng hơn.
+    </string>
+    <string name="number_thir">
+          Dầu dừa có khả năng làm ẩm phần da bị viêm tiết bã một cách dễ dàng. Mẹ chỉ cần bôi một chút dầu dừa lên da bé sau đó sử dụng lược nhỏ nhẹ nhà loại bỏ lớp da bong tróc.
+
+ Mẹ có thể dùng dầu thực vật như dầu dừa, dầu oliu để làm sạch phần phân su trên mông bé
+    </string>
+    <string name="number_fourteen">
+        Kéo nhỏ chuyên dụng để cắt lông mũi có đầu mũi tròn nên có thể dùng để cắt móng tay cho bé rất an toàn. Hoặc mẹ có thể dùng dũa móng tay cũng được.
+    </string>
+    <string name="number_fiveteen">
+         Mẹ có thể áp dụng tuyệt chiêu “tắm bằng khăn” với những bé không thích tắm. Mẹ quấn em bé vào khăn mềm hoặc vải rồi cẩn thận lau nhẹ hai tay, hai chân. Sau đó giặt sạch và quấn lại, lau những bộ phận khác.
+    </string>
+    <string name="number_sixteen">
+          Mẹ có thể dùng một tấm nệm nhỏ gọi là changing pad, đây là một loại nệm để bé nằm khi thay tã. Chúng rất tiện dụng vì mẹ có thể đặt bé nằm trên mặt phẳng có chiều cao phù hợp nên không cần phải cúi xuống thay tã cho bé. Khi dùng loại nệm này, mẹ có thể đặt một miếng vải lót lên trên tấm nệm để đảm bảo nệm luôn sạch sẽ, thoáng mát.
+
+  Mẹ có thể dùng khăn ướt vuốt vuốt phải dưới rốn bé trai trước khi thay bỉm. Nếu bé buồn tiểu bé sẽ đi tiểu ngay trong bỉm đang dùng. Như vậy mẹ sẽ ngăn được việc bé tiểu lên người mẹ khi thay bỉm.
+
+ Nếu nhà có nhiều tầng mẹ cần chuẩn bị vài miếng bỉm, kem bôi, khăn lau và thùng rác ở mỗi tầng để không mất công lên xuống nhiều lần.
+
+  Mẹ nên chuẩn bị sẵn bỉm trước cho bé. Không bao giờ đợi hết mới chạy đi mua.
+
+  Mẹ không nên vứt cả chiếc bỉm mới chỉ vì phần dán của nó đã bị bong hoặc không còn dính nữa. Chỉ cần dùng băng dán cá nhân hoặc băng dán y tế là miếng bỉm lại có thể dùng bình thường.
+    </string>
+    <string name="number_seventeen">
+          Áo ngủ của trẻ sơ sinh sẽ giúp bé cử động thoải mái hơn là quần áo thông thường hay pyjama. Hơn nữa phần bo lại phía dưới sẽ giúp giữ ấm cho bàn chân và phần thân dưới của bé.
+
+ Khi mua quần áo cho bé ưu tiên chọn đồ có khóa bấm, hạn chế nút cài. Việc này giúp thay quần áo cho bé nhanh chóng hơn.
+    </string>
+    <string name="number_eightteen">
+          Mẹ nên bế bé theo kiểu ôm bóng (ôm bé nằng ngang một bên bông bằng cánh tay vuông góc) và gội đầu cho bé dưới vòi nước nhà bếp. Cách này sẽ giúp mẹ giảm thời gian tắm bé.
+    </string>
+    <string name="number_nineteen">
+         Áo len hoặc áo nỉ của mẹ có thể tái sử dụng thành yếm cổ hoặc chồng cổ cho bé. Những chất liệu này có khả năng thấm hút hoàn toàn nước dãi, nước mũi hay đồ ăn vương trên mặt bé.
+
+ Cách làm như sau: mẹ cắt một phần ống tay áo rồi quấn qua đầu bé, cổ tay áo ở phía bên trên. Như vậy mẹ đã có yếm cổ tiện lợi cho bé yêu.
+    </string>
+    <string name="number_twenty">
+         Khi đưa bé đi ra ngoài chơi mẹ cần chuẩn bị sẵn một chiếc túi trong đó có tất cả đồ dùng cần thiết cho bé như bỉm giấy, bình sữa, khăn mặt, núm vú… để có thể lấy ra dùng bất cứ khi nào.
+
+ Để mang vác ghế an toàn dùng trên xe ô tô cho bé thì mẹ nên cắt một miếng xốp mềm có hình ống rồi gắn vào phần quai xách. Điều này giúp mẹ đỡ bị đau tay khi xách ghế.
+    </string>
+    <string name="tips_for_baby_care">Mẹo chăm sóc bé</string>
+
+
+</resources>

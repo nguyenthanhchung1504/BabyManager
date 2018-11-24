@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Baby Manager</string>
+    <string name="tell_us_about_your_baby">Information of the baby</string>
+    <string name="full_name">Full name</string>
+    <string name="choose_birthday">Choose birthday</string>
+    <string name="it_is_a_boy_or_a_girl">Is a boy or a girl?</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="feed">Feed</string>
+    <string name="small_empty_time">Small empty time</string>
+    <string name="history_feed">History of feeding</string>
+    <string name="timer">Timer</string>
+    <string name="height_and_weight">Height,weight</string>
+    <string name="other_functions">Other functions</string>
+    <string name="sleep">Sleep</string>
+    <string name="change_diaper">Changing diapers</string>
+    <string name="chart">Chart</string>
+    <string name="info_baby">Information of the child</string>
+    <string name="info_developer">Developer Information</string>
+    <string name="tips">Tips for baby</string>
+    <string name="history_weight_height">History of weight and height</string>
+    <string name="sleep_history">History sleep</string>
+    <string name="change_diaper_history">History change diapers</string>
+    <string name="chart_height_weight">"Chart height, weight "</string>
+    <string name="fill_title">Enter a title</string>
+    <string name="fill_body">Import content</string>
+    <string name="turn_off_the_ringtone">Turn off</string>
+    <string name="dried">Poo</string>
+    <string name="wet">Pee</string>
+    <string name="no_data">No time data, press the + sign to add time</string>
+    <string name="zergitas">ZERGITAS</string>
+    <string name="cau_giay_ha_noi">Cau Giay,Ha Noi</string>
+    <string name="product">Product: Baby manager</string>
+    <string name="version">Version : 1.0.0</string>
+    <string name="develop">Developer : Nguyễn Thành Chung</string>
+    <string name="designer">Designer : Vũ Hồng Ngọc</string>
+    <string name="add_height_weight">Add height and weight</string>
+    <string name="height">Height</string>
+    <string name="cm">Cm</string>
+    <string name="weight">Weight</string>
+    <string name="kg">Kg</string>
+    <string name="sex">Sex</string>
+    <string name="let_go_to_bed">Let\'s go to bed</string>
+    <string name="start_sleep">Start sleeping</string>
+    <string name="wake_up">Wake up</string>
+    <string name="no_data_timer">No data, invite you to add time</string>
+    <string name="choose_food_type">Choose the food type</string>
+    <string name="content">Content</string>
+    <string name="ml">ml</string>
+    <string name="delete">Delete</string>
+    <string name="timer_sleep">Sleep time</string>
+    <string name="measure">Measure</string>
+    <string name="deleted">Deleted!</string>
+    <string name="continues_sleep">Continue to sleep</string>
+    <string name="shortcut_label">shortcut label</string>
+    <string name="navigation_drawer_open" >Open navigation drawer</string>
+    <string name="title_activity_home">History time</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" >Android Studio</string>
+    <string name="nav_header_subtitle" >android.studio@android.com</string>
+    <string name="nav_header_desc" >Navigation header</string>
+    <string name="action_settings" >Settings</string>
+    <string name="choose_language">Choose language...</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="english">English</string>
+    <string name="japanese">Japanese</string>
+    <string name="tips_for_baby">Baby care tips</string>
+    <string name="next">Next</string>
+    <string name="detail">Detail</string>
+    <string name="Boy">Boy</string>
+    <string name="Girl">Girl</string>
+    <string name="please_fill_your_baby">Please enter a name for the baby</string>
+    <string name="hours"> hours </string>
+    <string name="minutes"> minutes </string>
+    <string name="date">Date </string>
+    <string name="powdered_milk">Powdered milk</string>
+    <string name="mother_milk">Mother milk</string>
+    <string name="milk">Milk</string>
+    <string name="meal">Meal</string>
+    <string name="fruit">Fruit</string>
+    <string name="meat">Meat</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="cake">Cakes</string>
+    <string name="juice">Juices</string>
+    <string name="cereals">Cereals</string>
+    <string name="to">to</string>
+    <string name="month">Month</string>
+    <string name="jan">January</string>
+    <string name="fer">February</string>
+    <string name="mar">March</string>
+    <string name="apr">April</string>
+    <string name="may">May</string>
+    <string name="jun">June</string>
+    <string name="jul">July</string>
+    <string name="aug">August</string>
+    <string name="sep">September</string>
+    <string name="oct">October</string>
+    <string name="nov">November</string>
+    <string name="dec">December</string>
+    <string name="measure_history">History to weight, height</string>
+    <string name="milk_formula">Milk formula</string>
+    <string name="please_fill">Invite you enter full</string>
+    <string name="timer_history">History time</string>
+    <string name="change_diaper_baby">Change for baby</string>
+    <string name="change_diaper_button">Change diaper</string>
+    <string name="diaper_pee">Dry diapers</string>
+    <string name="diaper_poo">Wet diapers</string>
+    <string name="timer_for_eat_baby">Feeding time</string>
+    <string name="height_weight">Height,Weight</string>
+    <string name="add_new">Add a new one</string>
+    <string name="track_sleep">Track sleep</string>
+    <string name="diary_baby">Baby diary</string>
+    <string name="save">Save</string>
+    <string name="note">Note...</string>
+    <string name="ege_meat_fish">Eggs, meat, fish</string>
+    <string name="vegetables_baby">Vegetables</string>
+    <string name="cake_baby">Pie</string>
+    <string name="water">Water</string>
+    <string name="choose_milk">Choose the type of milk</string>
+    <string name="baby_slept">Baby was sleeping</string>
+    <string name="fill_height">Invite you to add a baby height</string>
+    <string name="fill_weight">Invite you to add weight to baby</string>
+    <string name="you_have_timer">You have the alarm</string>
+    <string name="sleep_icon">Sleep</string>
+    <string name="eat_icon">Eat</string>
+    <string name="diaper_icon">Changing diapers</string>
+    <string name="tips_icon">Tips</string>
+    <string name="diaper">Diaper</string>
+    <string name="chart_statistics">Chart statistics</string>
+    <string name="chart_chart">Chart</string>
+    <string name="timer_limit">You choose larger than the current time</string>
+    <string name="edit_info"><u>Edit information</u></string>
+    <string name="accept"><u>Accept</u></string>
+    <string name="error">Unsuccessful ! You have not entered a baby name yet</string>
+
+    <string name="number_one">Tips to help your baby take medicine easily</string>
+    <string name="number_two">How to bathe children</string>
+    <string name="number_three" >Vegetable oil helps to remove buffalo ducks on baby"s head</string>
+    <string name="number_four">Cut nails for baby</string>
+    <string name="number_five">Bathe with a towel</string>
+    <string name="number_six">Change diapers for baby</string>
+    <string name="number_seven">Sleeping bag for babies</string>
+    <string name="number_eight">How to hold a baby</string>
+    <string name="number_nine">How to completely drain saliva, nasal or food on the baby face</string>
+    <string name="number_ten">Get your baby out</string>
+
+    <string name="number_ele">
+         A small tip to help your baby take the pill is to munch a small hole in the tip of the nipple and insert the medication. Or you can use a bottle of milk instead of a hole. When baby is sucking penny, she just need to give medicine to drink. Too simple right?
+
+  Mom can help her by refraining from putting her to sit on her mother"s thighs and using her mother"s leg to move her baby"s body into a lap while holding her head still.
+    </string>
+    <string name="number_twe">
+         Baby sleepwear will help your baby move better than normal clothes or pajamas. In addition, the lower part helps keep the feet and lower body warm.
+
+ When buying baby clothes priority to select the lock, press the button. This helps to change the baby"s clothes more quickly.
+    </string>
+    <string name="number_thir">
+          Coconut oil is able to moisturize the skin with inflammation of sebum easily. Just apply a little coconut oil to your baby"s skin then use a lightweight comb to remove the peeling skin.
+
+ Mother can use vegetable oil such as coconut oil, olive oil to clean the mucus on baby"s ass
+    </string>
+    <string name="number_fourteen">
+
+Small, dedicated nose cutter, which can be used to cut baby"s nails safely. Or you can use nail files.
+    </string>
+    <string name="number_fiveteen">
+        You can apply the "bath towel" to those who do not like bathing. Mothers wrap the baby in a soft cloth or cloth and carefully gently wipe both hands and feet. Then wash and rewind, wipe the other parts.
+    </string>
+    <string name="number_sixteen">
+         You can use a small mattress called a changing pad, which is a kind of mattress to lie on when changing diapers. They are very convenient because they can be placed on a flat surface with the right height so there is no need to bend over to change the baby diaper. When using this type of mattress, mother can put a lining pad on the mattress to ensure the mattress is always clean, cool.
+
+  You can use a wet towel to rub under the baby"s navel before changing diapers. If your baby is depressed, he or she will urinate in the bladder. So you will prevent the urine on the mother when changing diapers.
+
+ If the house has many floors, you need to prepare some diapers, creams, wipes and trash on each floor so that you do not have to go up and down several times.
+
+  Mother should be prepared in advance for her baby. Never wait to run away to buy.
+
+  You should not throw away the new diaper just because its paste is loose or sticky. Just use a personal patch or medical bandage as the back pad can be used normally.
+    </string>
+    <string name="number_seventeen">
+
+Baby sleepwear will help your baby move better than normal clothes or pajamas. In addition, the lower part helps keep the feet and lower body warm.
+
+ When buying baby clothes priority to select the lock, press the button. This helps to change the baby"s clothes more quickly.
+    </string>
+    <string name="number_eightteen">
+         Mother should hold the baby in the shape of a ball hug (hugging her across a cotton pad with her right arm) and wash her head under the kitchen faucet. This will help the mother reduce bath time.
+    </string>
+    <string name="number_nineteen">
+
+Sweater or maternity sweatshirt can be recycled into neck or necklaces. These materials are capable of absorbing droplets, nasal drops or baby food.
+
+ The way to do is as follows: mother cut a piece of sleeves and then wrapped over the baby"s head, the sleeve on the upper side. So, I have a good neck for your baby.
+    </string>
+    <string name="number_twenty" tools:ignore="TypographyEllipsis">
+         When you go out to play, you need to have a bag that includes everything you need for your baby such as a paper napkin, milk bottle, face towel, nipple ... to be taken out at any time.
+
+ To carry a baby car seat, mother should cut a soft sponge shaped tubing and attach to the handle. This helps the mother to have pain when carrying her chair.
+    </string>
+    <string name="tips_for_baby_care">Tips for baby care</string>
+</resources>

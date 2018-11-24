@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#68919a</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorYellow">#e4d870</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="original_holo">#0099cc</color>
+    <color name="light_grey">#666666</color>
+    <color name="bgRowBackground">#FA315B</color>
+    <color name="color_font_button">#ef847a</color>
+    <color name="background_navigation">#f3f2f2</color>
+    <color name="text_sleep">#707070</color>
+    <color name="color_clock">#f5f5f5</color>
+</resources>
