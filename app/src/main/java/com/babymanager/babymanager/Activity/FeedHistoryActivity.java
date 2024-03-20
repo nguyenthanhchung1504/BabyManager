@@ -3,13 +3,6 @@ package com.babymanager.babymanager.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,13 +11,20 @@ import android.view.animation.LayoutAnimationController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.babymanager.babymanager.Adapter.FeedAdapter;
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.Helper.RecyclerItemTouchHelper;
 import com.babymanager.babymanager.Interface.RecyclerItemTouchHelperListener;
 import com.babymanager.babymanager.Models.Feed;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
+import com.google.android.material.snackbar.Snackbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -82,24 +82,7 @@ public class FeedHistoryActivity extends AppCompatActivity implements RecyclerIt
                 recreate();
             }
         });
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
     private void showHistoryFeed() {

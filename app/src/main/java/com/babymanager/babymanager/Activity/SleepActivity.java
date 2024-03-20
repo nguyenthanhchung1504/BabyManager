@@ -4,17 +4,17 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.R;
 import com.babymanager.babymanager.Service.TimeService;
-import com.babymanager.babymanager.Utils.Ads;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -67,24 +67,7 @@ public class SleepActivity extends AppCompatActivity implements PropertyChangeLi
         ButterKnife.bind(this);
         h = new Handler();
         btnWakeUp.setEnabled(false);
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
     @Override

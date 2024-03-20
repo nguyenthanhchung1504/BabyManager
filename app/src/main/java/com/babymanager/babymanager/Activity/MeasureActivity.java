@@ -2,7 +2,6 @@ package com.babymanager.babymanager.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -11,9 +10,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -44,24 +44,7 @@ public class MeasureActivity extends AppCompatActivity {
 //        languageUtils.loadLocale();
         setContentView(R.layout.activity_measure);
         ButterKnife.bind(this);
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
 
     }
 

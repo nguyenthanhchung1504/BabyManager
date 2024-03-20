@@ -2,17 +2,17 @@ package com.babymanager.babymanager.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.babymanager.babymanager.Adapter.CategoryAdapter;
 import com.babymanager.babymanager.Database.TipsBabyDatabase;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,24 +37,6 @@ public class CategoryTipsActivity extends AppCompatActivity {
         lstCategory.setHasFixedSize(true);
         adapter = new CategoryAdapter(this, database.getAllCategory());
         lstCategory.setAdapter(adapter);
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
     @OnClick(R.id.img_back)

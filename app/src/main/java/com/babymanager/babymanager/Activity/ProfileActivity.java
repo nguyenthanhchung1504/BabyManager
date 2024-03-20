@@ -4,9 +4,6 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.DatePicker;
@@ -16,10 +13,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.Models.User;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
 import com.bumptech.glide.Glide;
 
 import java.util.Calendar;
@@ -99,24 +99,7 @@ public class ProfileActivity extends AppCompatActivity {
             txtWeight.setText(new StringBuilder(getString(R.string.weight)).append("  :  ").append(userHeightWeight.getHeight())
                     .append(" kg"));
         }
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
     @OnClick(R.id.img_back)

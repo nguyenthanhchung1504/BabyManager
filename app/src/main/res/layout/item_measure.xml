@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="@dimen/_5sdp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content" />
 
     </RelativeLayout>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_foreground"
         android:background="@android:color/white"
         android:layout_width="match_parent"
@@ -105,6 +105,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_diaper"
             app:layout_constraintTop_toBottomOf="@+id/txt_start_end" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

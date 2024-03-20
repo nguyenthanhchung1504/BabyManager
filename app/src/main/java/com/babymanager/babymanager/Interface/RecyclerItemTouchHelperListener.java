@@ -1,6 +1,7 @@
 package com.babymanager.babymanager.Interface;
 
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Admin on 3/21/2018.

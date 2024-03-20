@@ -4,17 +4,17 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
 
 import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
@@ -69,24 +69,7 @@ public class DiaperActivity extends AppCompatActivity {
         imgPeeHide.setVisibility(View.VISIBLE);
         imgPooHide.setVisibility(View.GONE);
         status = "1";
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
     @OnClick({R.id.img_pee_show, R.id.img_poo_show, R.id.btn_diaper})

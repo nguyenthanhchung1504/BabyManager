@@ -10,11 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -23,9 +19,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.babymanager.babymanager.Activity.HomeActivity;
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
-import com.babymanager.babymanager.Utils.Ads;
 import com.babymanager.babymanager.Utils.Constant;
 import com.zer.android.newsdk.ZAndroidSDK;
 
@@ -84,25 +85,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, HomeActivity.class));
             finish();
         }
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
-        ZAndroidSDK.init(this);
     }
 
     @OnClick({R.id.img_user, R.id.btn_birthday, R.id.img_boy, R.id.img_girl, R.id.btn_next})

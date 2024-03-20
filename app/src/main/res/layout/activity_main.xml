@@ -17,10 +17,13 @@
         android:layout_above="@id/layout_ads"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp">
@@ -46,7 +49,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <ImageView
@@ -81,7 +84,7 @@
                 app:layout_constraintStart_toEndOf="@+id/img_user"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_sex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -171,7 +174,7 @@
                     app:layout_constraintStart_toEndOf="@+id/img_boy"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
                     app:srcCompat="@drawable/girlshow" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:textColor="@android:color/black"
@@ -197,7 +200,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/btn_birthday"
                 app:layout_constraintStart_toStartOf="@+id/btn_birthday"
                 app:layout_constraintTop_toBottomOf="@+id/btn_birthday" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
 
 

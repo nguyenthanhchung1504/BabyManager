@@ -6,8 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -17,10 +15,12 @@ import android.widget.ScrollView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.R;
 import com.babymanager.babymanager.Receiver.AlarmReceiver;
-import com.babymanager.babymanager.Utils.Ads;
 import com.babymanager.babymanager.Utils.Constant;
 import com.babymanager.babymanager.Utils.SharedPreferenceUtils;
 
@@ -109,7 +109,7 @@ public class AlarmActivity extends AppCompatActivity {
                 } else {
                     intent.putExtra(Constant.MUSIC_ON_OF, "on");
                     pendingIntent = PendingIntent.getBroadcast(
-                            AlarmActivity.this, 0, intent, 0
+                            AlarmActivity.this, 0, intent, PendingIntent.FLAG_IMMUTABLE
                     );
                     alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                     BabyMangerDatabase database = new BabyMangerDatabase(AlarmActivity.this);
@@ -137,7 +137,7 @@ public class AlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlarmActivity.this, AlarmReceiver.class);
-                PendingIntent sender = PendingIntent.getBroadcast(AlarmActivity.this, 0, intent, 0);
+                PendingIntent sender = PendingIntent.getBroadcast(AlarmActivity.this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
                 AlarmManager alarmManager = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
                 alarmManager.cancel(sender);
                 intent.putExtra(Constant.MUSIC_ON_OF, "off");
@@ -148,24 +148,7 @@ public class AlarmActivity extends AppCompatActivity {
                 btnCancel.setEnabled(buttonEnable);
             }
         });
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
 

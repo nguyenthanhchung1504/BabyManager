@@ -4,17 +4,17 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.babymanager.babymanager.Database.TipsBabyDatabase;
 import com.babymanager.babymanager.Models.DetailTips;
 import com.babymanager.babymanager.R;
-import com.babymanager.babymanager.Utils.Ads;
 import com.babymanager.babymanager.Utils.Constant;
 
 import butterknife.BindView;
@@ -175,24 +175,7 @@ public class DetailTipsActivity extends AppCompatActivity {
             }
         }
 
-        Ads.b(this, layoutAds, new Ads.OnAdsListener() {
-            @Override
-            public void onError() {
-                layoutAds.setVisibility(View.GONE);
-            }
 
-            @Override
-            public void onAdLoaded() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdOpened() {
-                layoutAds.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Ads.f(this);
     }
 
 
