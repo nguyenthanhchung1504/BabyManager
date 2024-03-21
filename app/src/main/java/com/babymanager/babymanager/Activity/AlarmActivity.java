@@ -1,11 +1,14 @@
 package com.babymanager.babymanager.Activity;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +20,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.babymanager.babymanager.Database.BabyMangerDatabase;
 import com.babymanager.babymanager.R;
@@ -61,6 +65,58 @@ public class AlarmActivity extends AppCompatActivity {
     Date CurrentTime;
     Date endTime;
 
+    private void setAlarm(){
+        try{
+            DateFormat df = new SimpleDateFormat("dd MMM yyyy");
+            calendar.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+            calendar.set(Calendar.MINUTE, timePicker.getCurrentMinute());
+            int hour = timePicker.getCurrentHour();
+            int min = timePicker.getCurrentMinute();
+            int hourCurrent = calendar.get(Calendar.HOUR);
+            int minCurrent = calendar.get(Calendar.MINUTE);
+            dateCurrent = parseDate(hourCurrent + ":" + minCurrent);
+            dateCompare = parseDate(hour + ":" + min);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+            try {
+                CurrentTime = dateFormat.parse(dateFormat.format(new Date()));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            try {
+                endTime = dateFormat.parse(hour + ":" + min);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            if (CurrentTime.after(endTime)) {
+                Toast.makeText(AlarmActivity.this, R.string.timer_limit, Toast.LENGTH_SHORT).show();
+            } else if (edtTitle.getText().toString().isEmpty()) {
+                Toast.makeText(AlarmActivity.this, getString(R.string.fill_title), Toast.LENGTH_SHORT).show();
+            } else if (edtBody.getText().toString().isEmpty()) {
+                Toast.makeText(AlarmActivity.this, getString(R.string.fill_body), Toast.LENGTH_SHORT).show();
+            } else {
+                intent.putExtra(Constant.MUSIC_ON_OF, "on");
+                pendingIntent = PendingIntent.getBroadcast(
+                        AlarmActivity.this, 0, intent, PendingIntent.FLAG_IMMUTABLE
+                );
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                BabyMangerDatabase database = new BabyMangerDatabase(AlarmActivity.this);
+                database.addTimer(
+                        edtTitle.getText().toString(),
+                        edtBody.getText().toString(),
+                        hour + " " + getString(R.string.hours) + " " + min + " " + getString(R.string.minutes),
+                        getString(R.string.date) + " " + df.format(Calendar.getInstance().getTime()),
+                        1
+                );
+                SharedPreferenceUtils preferenceUtils = new SharedPreferenceUtils(AlarmActivity.this);
+                preferenceUtils.setValue(Constant.SAVE_TITLE_ALARM, edtTitle.getText().toString());
+                preferenceUtils.setValue(Constant.SAVE_CONTENT_ALARM, edtBody.getText().toString());
+                startActivity(new Intent(AlarmActivity.this, AlarmHistoryActivity.class));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,60 +132,26 @@ public class AlarmActivity extends AppCompatActivity {
         calendar = Calendar.getInstance();
         intent = new Intent(this, AlarmReceiver.class);
         btnAccept.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("ScheduleExactAlarm")
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                DateFormat df = new SimpleDateFormat("dd MMM yyyy");
+                AlarmManager manager = ContextCompat.getSystemService(getBaseContext(), AlarmManager.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    if (manager != null){
+                        if(!manager.canScheduleExactAlarms()){
+                            startActivity(new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM));
+                        }else{
+                            setAlarm();
+                        }
+                    }else{
+                        setAlarm();
+                    }
+                }else{
+                    setAlarm();
+                }
 
-                calendar.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
-                calendar.set(Calendar.MINUTE, timePicker.getCurrentMinute());
-                int hour = timePicker.getCurrentHour();
-                int min = timePicker.getCurrentMinute();
-                int hourCurrent = calendar.get(Calendar.HOUR);
-                int minCurrent = calendar.get(Calendar.MINUTE);
-                dateCurrent = parseDate(hourCurrent + ":" + minCurrent);
-                dateCompare = parseDate(hour + ":" + min);
-                SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-                try {
-                    CurrentTime = dateFormat.parse(dateFormat.format(new Date()));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    endTime = dateFormat.parse(hour + ":" + min);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                if (CurrentTime.after(endTime)) {
-                    Toast.makeText(AlarmActivity.this, R.string.timer_limit, Toast.LENGTH_SHORT).show();
-                } else if (edtTitle.getText().toString().isEmpty()) {
-                    Toast.makeText(AlarmActivity.this, getString(R.string.fill_title), Toast.LENGTH_SHORT).show();
-                } else if (edtBody.getText().toString().isEmpty()) {
-                    Toast.makeText(AlarmActivity.this, getString(R.string.fill_body), Toast.LENGTH_SHORT).show();
-                } else {
-                    intent.putExtra(Constant.MUSIC_ON_OF, "on");
-                    pendingIntent = PendingIntent.getBroadcast(
-                            AlarmActivity.this, 0, intent, PendingIntent.FLAG_IMMUTABLE
-                    );
-                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                    BabyMangerDatabase database = new BabyMangerDatabase(AlarmActivity.this);
-                    database.addTimer(
-                            edtTitle.getText().toString(),
-                            edtBody.getText().toString(),
-                            hour + " " + getString(R.string.hours) + " " + min + " " + getString(R.string.minutes),
-                            getString(R.string.date) + " " + df.format(Calendar.getInstance().getTime()),
-                            1
-                    );
-                    SharedPreferenceUtils preferenceUtils = new SharedPreferenceUtils(AlarmActivity.this);
-                    preferenceUtils.setValue(Constant.SAVE_TITLE_ALARM, edtTitle.getText().toString());
-                    preferenceUtils.setValue(Constant.SAVE_CONTENT_ALARM, edtBody.getText().toString());
-//                    buttonEnable = true;
-//                    SharedPreferences sharedPreferences = getSharedPreferences(Constant.BUTTON_CANCEL, MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = sharedPreferences.edit();
-//                    editor.putBoolean(Constant.SAVE_CANCEL, buttonEnable);
-//                    editor.commit();
-                    startActivity(new Intent(AlarmActivity.this, AlarmHistoryActivity.class));
-                }
             }
 
         });

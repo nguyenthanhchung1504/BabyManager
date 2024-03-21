@@ -65,7 +65,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/lst_history_feed"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
