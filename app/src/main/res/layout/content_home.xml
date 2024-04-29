@@ -19,16 +19,19 @@
         android:layout_above="@id/layout_ads"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 app:cardElevation="@dimen/_5sdp">
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -57,8 +60,8 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
 
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
             <ImageView
                 android:id="@+id/img_feed"
@@ -209,7 +212,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/img_sleep"
                 app:layout_constraintStart_toStartOf="@+id/img_sleep"
                 app:layout_constraintTop_toBottomOf="@+id/img_sleep" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
 
 </RelativeLayout>

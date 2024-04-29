@@ -12,8 +12,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.RequiresApi;
 import android.widget.RemoteViews;
+
+import androidx.annotation.RequiresApi;
 
 import com.babymanager.babymanager.Activity.SleepActivity;
 import com.babymanager.babymanager.R;
